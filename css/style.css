@@ -310,11 +310,15 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-}
+} 
 
 .section-container {
-  gap: 4rem;
+  display: flex;
+  flex-direction: row; /* Align children horizontally */
+  gap: 4rem; /* Space between items */
   height: 80%;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
 }
 
 .section__pic-container {
