@@ -2,6 +2,16 @@
 <html class="no-js" lang="en">
 
 <head>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0809L3J8N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0809L3J8N');
+  </script>
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -78,7 +88,13 @@
       <h1 class="title">Macguire McDuff</h1>
       <p class="section__text__p2">Associate Software Developer</p>
       <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./img/macguire_mcduff_2025_resume.pdf')">
+        <button class="btn btn-color-2" onclick="
+          gtag('event', 'resume_download', {
+            event_category: 'engagement',
+            event_label: 'Resume Button'
+          });
+          window.open('./img/macguire_mcduff_2026_resume.pdf');
+        ">
           Download Resume
         </button>
         <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -87,9 +103,21 @@
       </div>
       <div id="socials-container">
         <img src="./img/linkedin.png" alt="my linkedin profile"
-        class="icon" onclick="window.open('https://www.linkedin.com/in/macguire-mcduff/', '_blank')">
+          class="icon" onclick="
+            gtag('event', 'linkedin_click', {
+              event_category: 'social',
+              event_label: 'LinkedIn Profile'
+            });
+            window.open('https://www.linkedin.com/in/macguire-mcduff/', '_blank');
+          ">
         <img src="./img/github.png" alt="my github profile"
-        class="icon" onclick="window.open('https://github.com/macguirevan', '_blank')">
+        class="icon" onclick="
+          gtag('event', 'github_click', {
+            event_category: 'social',
+            event_label: 'GitHub Profile'
+          });
+          window.open('https://github.com/macguirevan', '_blank');
+        ">
       </div>
     </div>
   </section>
